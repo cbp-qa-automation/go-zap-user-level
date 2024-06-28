@@ -14,3 +14,9 @@ jobs:
         shell: sh
         run: |
           echo "hello world"
+      - name: checkout-source-code
+        uses: cloudbees-io/checkout@v1
+      - name: Run sonarqube bundled action from platform
+        uses: cloudbees-io/sonarqube-bundled-sast-scan-code@v1
+        with:
+          language: LANGUAGE_GO
