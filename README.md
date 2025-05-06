@@ -14,7 +14,7 @@ In contexts where performance is nice, but not critical, use the
 `SugaredLogger`. It's 4-10x faster than other structured logging
 packages and includes both structured and `printf`-style APIs.
 
-```go
+```go1
 logger, _ := zap.NewProduction()
 defer logger.Sync() // flushes buffer, if any
 sugar := logger.Sugar()
